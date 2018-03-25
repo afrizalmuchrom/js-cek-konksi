@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+ <html>
+ <head>
+ <meta charset="utf-8">
+ <title> koneksi gw </title>
+ 
+ </head>
+ <body>
+ <h1 id="info"></h1>
+ 
+
+ <script>
+ var bod = document.querySelector("body");
+
+var info = document.getElementById("info");
+
+
+
+
+function cek(){
+if (navigator.onLine == true){
+	info.innerHTML = "Terhubung";
+	bod.style.backgroundColor = "pink";
+
+	window.setTimeout("cek()", 1000);
+
+}else{
+	info.innerHTML = "<font color=white>Terputus</font>";
+bod.style.backgroundColor = "black";
+	window.setTimeout("cek()", 500);
+}
+
+
+}
+
+
+cek();
+
+ </script>
+ </body>
+ </html>
+
+
+
